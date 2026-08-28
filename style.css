@@ -855,94 +855,6 @@ img {
 }
 
 // ==========================================
-// DỮ LIỆU ĐƠN VỊ
-// ==========================================
-
-const providers = {
-
-    vi: [
-        "MoMo",
-        "ZaloPay",
-        "Kredivo",
-        "VNPay",
-        "Cake",
-        "Muadee",
-        "Viettel Money",
-        "FE PayLater",
-        "ShopeePay Later",
-        "TikTok Pay Later",
-        "Home PayLater",
-        "Các ví trả sau khác"
-    ],
-
-    the: [
-        "TPBank",
-        "Liobank",
-        "BIDV",
-        "HDBank",
-        "HDSaiSon",
-        "Cake",
-        "Các loại thẻ tín dụng khác"
-    ]
-
-};
-
-
-// ==========================================
-// MỨC PHÍ
-// ==========================================
-
-const feeRates = {
-
-    vi: {
-        "MoMo": 15,
-        "ZaloPay": 15,
-        "Kredivo": 15,
-        "VNPay": 15,
-        "Cake": 15,
-        "Muadee": 15,
-        "Viettel Money": 15,
-        "FE PayLater": 15,
-        "ShopeePay Later": 15,
-        "TikTok Pay Later": 15,
-        "Home PayLater": 15,
-        "Các ví trả sau khác": 15
-    },
-
-    the: {
-        "TPBank": 6,
-        "Liobank": 6,
-        "BIDV": 6,
-        "HDBank": 6,
-        "HDSaiSon": 6,
-        "Cake": 6,
-        "Các loại thẻ tín dụng khác": 6
-    }
-
-};
-
-
-// ==========================================
-// LẤY ELEMENT
-// ==========================================
-
-const serviceType = document.getElementById("serviceType");
-const provider = document.getElementById("provider");
-const amountInput = document.getElementById("amount");
-const calculateBtn = document.getElementById("calculateBtn");
-
-const feeResult = document.getElementById("feeResult");
-
-const resultService = document.getElementById("resultService");
-const resultProvider = document.getElementById("resultProvider");
-
-const resultAmount = document.getElementById("resultAmount");
-const resultPercent = document.getElementById("resultPercent");
-const resultFee = document.getElementById("resultFee");
-const resultReceive = document.getElementById("resultReceive");
-
-
-// ==========================================
 // FORMAT TIỀN
 // ==========================================
 
@@ -2980,4 +2892,16 @@ serviceType.addEventListener("change", function () {
     box-sizing: border-box;
     text-align: center;
     margin: 0 !important;
+}
+/* ==========================================
+   LOGO CÓ THỂ BẤM VỀ ĐẦU TRANG
+========================================== */
+
+.logo {
+    cursor: pointer;
+    user-select: none;
+}
+
+.logo img {
+    cursor: pointer;
 }
