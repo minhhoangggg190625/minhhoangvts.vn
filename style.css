@@ -4737,88 +4737,14 @@ body::before {
 .footer-brand {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-brand-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.footer-logo-img {
-    width:70px;
-    height: 70px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.footer-brand h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.footer-brand p {
-    margin: 8px 0 0;
-    font-size: 13px;
-    line-height: 1.4;
-    text-align: center;
-}
-/* =====================================================
-   HEADER MOBILE - TĂNG KÍCH THƯỚC LOGO + SĐT + ZALO
-===================================================== */
-
-@media (max-width: 768px) {
-
-    /* Logo */
-    .logo img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-    }
-
-    /* Số điện thoại + Zalo */
-    .header-contact .phone,
-    .header-contact .zalo {
-        font-size: 14px;
-        font-weight: 800;
-        padding: 8px 10px;
-    }
-
-}
-   .footer-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-brand-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+@@ -13,8 +4749,8 @@
 }
 
 .footer-logo-img {
     width: 70px;
     height: 70px;
+    width:150px;
+    height: 120px;
     object-fit: contain;
     flex-shrink: 0;
-}
-
-.footer-brand h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.footer-brand p {
-    margin: 8px 0 0;
-    font-size: 13px;
-    line-height: 1.4;
-    text-align: center;
 }
