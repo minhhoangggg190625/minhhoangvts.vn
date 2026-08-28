@@ -4911,31 +4911,3 @@ body::before {
     }
 
 }
-   @media (max-width: 600px) {
-
-    .footer-brand {
-        width: 100%;
-        align-items: center;
-    }
-
-    .footer-brand-img-row {
-        justify-content: center;
-        gap: 7px;
-    }
-
-    .footer-logo-img {
-        width: 42px;
-        height: 42px;
-    }
-
-    .footer-brand h3 {
-        font-size: 18px;
-    }
-
-    .footer-brand p {
-        font-size: 12px;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-}
