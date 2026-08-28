@@ -1,4 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
+// ==========================================
+// KHÔNG NHỚ VỊ TRÍ CUỘN CŨ
+// ==========================================
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+
+// ==========================================
+// LOAD WEB → VỀ ĐẦU TRANG
+// ==========================================
+
+window.addEventListener("load", function () {
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant"
+    });
+
+});
+
+
+// ==========================================
+// BẤM LOGO → VỀ ĐẦU TRANG
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const logo = document.querySelector(".logo");
+
+    if (logo) {
+
+        logo.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+    }
+
+});
 
     /* =====================================================
        LẤY CÁC PHẦN TỬ HTML
@@ -959,3 +1008,76 @@ if (newResetBtn) {
     });
 
 }
+// Không cho trình duyệt tự nhớ vị trí cuộn
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", function () {
+    window.scrollTo(0, 0);
+});
+// ==========================================
+// BẤM LOGO → VỀ ĐẦU TRANG
+// ==========================================
+
+document.querySelector(".logo").addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+
+});
+// ==========================================
+// LOGO → VỀ ĐẦU TRANG
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const homeLogo = document.getElementById("homeLogo");
+
+    if (homeLogo) {
+
+        homeLogo.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+    }
+
+});
+
+
+// ==========================================
+// MỖI LẦN LOAD / F5 → VỀ ĐẦU TRANG
+// ==========================================
+
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+
+        window.scrollTo(0, 0);
+
+    }, 50);
+
+});
