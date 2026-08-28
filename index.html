@@ -19,152 +19,54 @@
 
 <body>
 
-```css
-/* =====================================================
-   HEADER MOBILE - GỌN & ĐẸP
-===================================================== */
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-@media (max-width: 900px) {
+<header class="header" id="top">
 
-    .header {
-        height: 68px;
-    }
+    <div class="header-container">
 
-    .header-inner {
-        height: 68px;
-        width: 100%;
-        padding: 0 16px;
+        <a href="#top" class="logo">
+            <img
+                src="https://raw.githubusercontent.com/minhhoangggg190625/hinhwwebmoi/main/34d1bc27-cbd3-492f-a597-5b486fefcab2%20%281%29.png"
+                alt="MINH HOÀNG VTS"
+            >
+        </a>
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        <nav class="nav">
 
-    /* LOGO */
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-    }
+            <a href="#gioi-thieu">Giới thiệu</a>
+            <a href="#dich-vu">Dịch vụ</a>
+            <a href="#tinh-phi">Tính phí</a>
+            <a href="#danh-gia">Đánh giá</a>
+            <a href="#faq">FAQ</a>
 
-    .logo-box {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        font-size: 14px;
-    }
+        </nav>
 
-    .logo-text strong {
-        font-size: 14px;
-        white-space: nowrap;
-    }
+        <div class="header-contact">
 
-    .logo-text span {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
+            <a href="tel:0352227969" class="phone">
+                ☎ 035.222.7969
+            </a>
 
-    /* MENU BUTTON */
-    .menu-button {
-        width: 42px;
-        height: 42px;
+            <a
+                href="https://zalo.me/0334302092"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="zalo"
+            >
+                💬 Nhắn tin Zalo
+            </a>
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        </div>
 
-        border: 1px solid #e3eaf3;
-        border-radius: 9px;
+    </div>
 
-        background: #f7faff;
-        color: #10254a;
-
-        font-size: 23px;
-        cursor: pointer;
-    }
-
-    /* MENU MỞ */
-    .nav {
-        position: absolute;
-
-        top: 68px;
-        left: 10px;
-        right: 10px;
-
-        display: none;
-
-        padding: 10px;
-
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2px;
-
-        background: #ffffff;
-
-        border: 1px solid #e5ebf3;
-        border-radius: 12px;
-
-        box-shadow: 0 15px 35px rgba(16, 37, 74, .12);
-    }
-
-    .nav.active {
-        display: flex;
-    }
-
-    .nav a {
-        width: 100%;
-
-        padding: 13px 15px;
-
-        border-radius: 8px;
-
-        color: #34445c;
-
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .nav a:hover {
-        background: #f1f7ff;
-        color: #1264d8;
-    }
-
-    .header-call {
-        display: none;
-    }
-}
+</header>
 
 
-/* =====================================================
-   ĐIỆN THOẠI NHỎ
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .header-inner {
-        padding: 0 12px;
-    }
-
-    .logo-box {
-        width: 38px;
-        height: 38px;
-    }
-
-    .logo-text strong {
-        font-size: 13px;
-    }
-
-    .logo-text span {
-        font-size: 7px;
-    }
-
-    .menu-button {
-        width: 40px;
-        height: 40px;
-        font-size: 21px;
-    }
-}
-```
+<main>
 
 <!-- =====================================================
      BANNER
