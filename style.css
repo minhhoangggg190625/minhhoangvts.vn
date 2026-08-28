@@ -4767,20 +4767,24 @@ body::before {
     line-height: 1.4;
     text-align: center;
 }
-   /* =====================================================
-   HEADER - SĐT & ZALO TRÊN MOBILE
+/* =====================================================
+   HEADER MOBILE - TĂNG KÍCH THƯỚC LOGO + SĐT + ZALO
 ===================================================== */
 
 @media (max-width: 768px) {
 
-    .header-contact {
-        gap: 8px;
+    /* Logo */
+    .logo img {
+        width: 58px;
+        height: 58px;
+        object-fit: contain;
     }
 
+    /* Số điện thoại + Zalo */
     .header-contact .phone,
     .header-contact .zalo {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 800;
         padding: 8px 10px;
     }
 
