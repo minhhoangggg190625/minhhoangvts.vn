@@ -4767,3 +4767,21 @@ body::before {
     line-height: 1.4;
     text-align: center;
 }
+   /* =====================================================
+   HEADER - SĐT & ZALO TRÊN MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .header-contact {
+        gap: 8px;
+    }
+
+    .header-contact .phone,
+    .header-contact .zalo {
+        font-size: 14px;
+        font-weight: 700;
+        padding: 8px 10px;
+    }
+
+}
