@@ -4749,8 +4749,8 @@ body::before {
 }
 
 .footer-logo-img {
-    width:150px;
-    height: 120px;
+    width:70px;
+    height: 70px;
     object-fit: contain;
     flex-shrink: 0;
 }
