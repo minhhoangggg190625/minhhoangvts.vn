@@ -2632,3 +2632,402 @@ img {
         scroll-behavior: auto !important;
     }
 }
+/* =====================================================
+   FOOTER - MINH HOÀNG VTS
+   GIỮ NGUYÊN MÀU CŨ
+===================================================== */
+
+.footer {
+    margin-top: 55px;
+
+    padding: 38px 0 16px;
+
+    background: linear-gradient(
+        180deg,
+        #fff7fb 0%,
+        #ffeaf4 100%
+    );
+
+    border-top: 1px solid #f3d4e2;
+
+    color: #555;
+}
+
+
+/* =====================================================
+   FOOTER MAIN
+===================================================== */
+
+.footer-main {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        1fr
+        1fr;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand {
+    max-width: 100%;
+
+    padding-right: 10px;
+}
+
+.footer-logo-img {
+    width: 82px;
+    height: 55px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+.footer-brand h3 {
+    color: #d92b82;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    margin-bottom: 3px;
+}
+
+.footer-brand p {
+    color: #555;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.footer-brand span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CỘT THÔNG TIN / LIÊN HỆ
+===================================================== */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.footer-column h3 {
+    color: #d92b82;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color: #555;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: all .2s ease;
+}
+
+.footer-column a:hover {
+    color: #d92b82;
+
+    transform: translateX(3px);
+}
+
+.footer-column p {
+    color: #555;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   ZALO
+===================================================== */
+
+.footer-zalo {
+    width: fit-content !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 4px;
+
+    padding: 8px 15px;
+
+    background: #00a86b;
+
+    color: #fff !important;
+
+    border-radius: 20px;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    transition: .2s ease;
+}
+
+.footer-zalo:hover {
+    background: #008f5b;
+
+    transform: translateY(-1px) !important;
+}
+
+
+/* =====================================================
+   ĐƯỜNG KẺ
+===================================================== */
+
+.footer-line {
+    width: 100%;
+
+    height: 1px;
+
+    background: #eccbd9;
+
+    margin: 27px 0 14px;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 20px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom strong {
+    color: #d92b82;
+}
+
+
+/* =====================================================
+   GHI CHÚ
+===================================================== */
+
+.footer-note {
+    max-width: 850px;
+
+    margin: 8px auto 0;
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   MOBILE FOOTER
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .footer {
+        margin-top: 40px;
+
+        padding: 28px 0 15px;
+    }
+
+    .footer-main {
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+        gap: 12px;
+
+        align-items: start;
+
+        text-align: center;
+    }
+
+
+    /* BRAND */
+
+    .footer-brand {
+        padding-right: 0;
+    }
+
+    .footer-logo-img {
+        width: 65px;
+        height: 45px;
+
+        margin: 0 auto 5px;
+    }
+
+    .footer-brand h3 {
+        font-size: 14px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+
+    .footer-brand span {
+        font-size: 9px;
+    }
+
+
+    /* CỘT */
+
+    .footer-column {
+        align-items: center;
+
+        gap: 5px;
+    }
+
+    .footer-column h3 {
+        font-size: 12px;
+
+        margin-bottom: 3px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 11px;
+    }
+
+
+    /* ZALO */
+
+    .footer-zalo {
+        padding: 6px 10px;
+
+        font-size: 10px !important;
+    }
+
+
+    /* LINE */
+
+    .footer-line {
+        margin: 20px 0 12px;
+    }
+
+
+    /* BOTTOM */
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 3px;
+
+        font-size: 10px;
+    }
+
+    .footer-note {
+        font-size: 8px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE RẤT NHỎ
+===================================================== */
+
+@media (max-width: 430px) {
+
+    .footer {
+        padding: 25px 0 13px;
+    }
+
+    .footer-main {
+        gap: 7px;
+    }
+
+    .footer-logo-img {
+        width: 58px;
+        height: 40px;
+    }
+
+    .footer-brand h3 {
+        font-size: 12px;
+    }
+
+    .footer-brand p {
+        font-size: 10px;
+    }
+
+    .footer-brand span {
+        font-size: 8px;
+    }
+
+    .footer-column h3 {
+        font-size: 11px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 9px;
+    }
+
+    .footer-zalo {
+        padding: 5px 8px;
+
+        font-size: 9px !important;
+    }
+
+    .footer-bottom {
+        font-size: 9px;
+    }
+
+    .footer-note {
+        font-size: 7px;
+    }
+}
