@@ -4896,3 +4896,18 @@ body::before {
     }
 
 }
+@media (max-width: 768px) {
+
+    .logo img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .header-contact .phone,
+    .header-contact .zalo {
+        font-size: 15px;
+        font-weight: 800;
+        padding: 9px 12px;
+    }
+
+}
