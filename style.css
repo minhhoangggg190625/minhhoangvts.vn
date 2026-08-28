@@ -4737,14 +4737,33 @@ body::before {
 .footer-brand {
     display: flex;
     flex-direction: column;
-@@ -13,8 +4749,8 @@
+    align-items: center;
+    text-align: center;
+}
+
+.footer-brand-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .footer-logo-img {
-    width: 70px;
+    width:70px;
     height: 70px;
-    width:150px;
-    height: 120px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.footer-brand h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.footer-brand p {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: center;
 }
