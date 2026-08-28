@@ -1,94 +1,12 @@
 /* =========================================================
-   MINH HOÀNG VTS
-   STYLE.CSS - CLEAN VERSION
-========================================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-:root {
-    --pink: #e91e63;
-    --pink-dark: #c2185b;
-    --pink-light: #fff0f6;
-
-    --green: #00a86b;
-    --green-dark: #008f5b;
-
-    --text: #202124;
-    --muted: #6b7280;
-    --border: #e5e7eb;
-
-    --white: #ffffff;
-    --bg: #ffffff;
-
-    --shadow-sm: 0 5px 18px rgba(0, 0, 0, .06);
-    --shadow: 0 12px 35px rgba(0, 0, 0, .09);
-    --shadow-lg: 0 20px 55px rgba(0, 0, 0, .13);
-
-    --radius: 18px;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-
-    font-family: "Be Vietnam Pro", Arial, sans-serif;
-
-    color: var(--text);
-    background: var(--bg);
-
-    line-height: 1.6;
-    font-size: 15px;
-
-    overflow-x: hidden;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-input,
-select {
-    font-family: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-button {
-    border: 0;
-}
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
-.container {
-    width: min(1100px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-/* =========================================================
-   HEADER
+   HEADER - MINH HOÀNG VTS
+   PC + MOBILE
 ========================================================= */
 
 .header {
     position: sticky;
     top: 0;
-    z-index: 9999;
-
-    width: 100%;
+    z-index: 1000;
 
     background: linear-gradient(
         135deg,
@@ -101,29 +19,31 @@ button {
     border-bottom: 1px solid #ffd1e3;
 
     box-shadow:
-        0 4px 18px rgba(217, 43, 130, .08);
+        0 4px 18px rgba(217, 43, 130, 0.08);
 }
 
 .header-container {
     width: min(1180px, calc(100% - 32px));
-
     min-height: 78px;
-
-    margin: 0 auto;
+    margin: auto;
 
     display: flex;
     align-items: center;
-
-    gap: 20px;
+    gap: 25px;
 }
 
-/* =========================================================
+/* =========================
    LOGO
-========================================================= */
+========================= */
 
 .logo {
-    flex-shrink: 0;
+    flex: 0 0 auto;
 
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
     display: flex;
     align-items: center;
 }
@@ -135,9 +55,9 @@ button {
     object-fit: contain;
 }
 
-/* =========================================================
-   NAV
-========================================================= */
+/* =========================
+   MENU
+========================= */
 
 .nav {
     flex: 1;
@@ -146,69 +66,56 @@ button {
     justify-content: center;
     align-items: center;
 
-    gap: 5px;
+    gap: 6px;
 }
 
 .nav a {
-    display: block;
-
-    padding: 10px 13px;
+    padding: 10px 14px;
 
     border-radius: 10px;
 
     color: #555;
-
-    font-size: 14px;
     font-weight: 600;
+    font-size: 14px;
 
-    white-space: nowrap;
-
-    transition: all .2s ease;
+    transition: all .25s ease;
 }
 
 .nav a:hover {
-    color: var(--pink);
-
+    color: #d92b82;
     background: #fff;
 
     box-shadow:
         0 3px 10px rgba(217, 43, 130, .08);
 }
 
-/* =========================================================
-   HEADER CONTACT
-========================================================= */
+/* =========================
+   LIÊN HỆ HEADER
+========================= */
 
 .header-contact {
-    flex-shrink: 0;
+    flex: 0 0 auto;
 
     display: flex;
     align-items: center;
-
     gap: 7px;
 }
 
 .header-contact a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    white-space: nowrap;
 
-    padding: 9px 11px;
+    padding: 9px 12px;
 
     border-radius: 10px;
 
     font-size: 12px;
     font-weight: 700;
 
-    white-space: nowrap;
-
-    transition: all .2s ease;
+    transition: .2s ease;
 }
 
-/* PHONE */
-
 .phone {
-    color: var(--pink);
+    color: #d92b82;
 
     background: #fff;
 
@@ -223,966 +130,269 @@ button {
     transform: translateY(-1px);
 }
 
-/* ZALO */
-
 .zalo {
     color: #fff;
 
-    background: var(--green);
+    background: #00a86b;
 
-    border: 1px solid var(--green);
+    border: 1px solid #00a86b;
 
     box-shadow:
         0 3px 10px rgba(0, 168, 107, .15);
 }
 
 .zalo:hover {
-    background: var(--green-dark);
+    background: #008f5b;
     transform: translateY(-1px);
 }
 
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-    width: 100%;
-    padding: 20px 0 30px;
-}
-
-.hero-image {
-    width: 100%;
-
-    border-radius: 10px;
-
-    box-shadow: var(--shadow);
-}
 
 /* =========================================================
-   SECTION TITLE
+   HEADER TABLET
 ========================================================= */
 
-.section-title {
-    margin-bottom: 10px;
+@media (max-width: 900px) {
 
-    text-align: center;
-
-    color: var(--pink);
-
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.section-subtitle {
-    margin-bottom: 35px;
-
-    text-align: center;
-
-    color: var(--pink);
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.intro-section {
-    width: 100%;
-
-    padding: 65px 20px;
-}
-
-.intro-section .container {
-    width: min(1000px, 100%);
-}
-
-.intro-box {
-    position: relative;
-
-    width: 100%;
-
-    padding: 48px 55px;
-
-    background: #fff;
-
-    border: 1px solid #ffd6e8;
-    border-radius: 24px;
-
-    box-shadow:
-        0 12px 35px rgba(225, 45, 112, .10);
-
-    overflow: hidden;
-}
-
-.intro-box::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-    bottom: 0;
-
-    width: 5px;
-
-    background: linear-gradient(
-        180deg,
-        #e91e63,
-        #ff5c9a
-    );
-}
-
-.intro-section .section-title {
-    max-width: 750px;
-
-    margin: 0 auto;
-
-    font-size: 32px;
-
-    line-height: 1.35;
-
-    letter-spacing: -.4px;
-}
-
-.intro-section .section-title::after {
-    content: "";
-
-    display: block;
-
-    width: 65px;
-    height: 4px;
-
-    margin: 16px auto 34px;
-
-    border-radius: 50px;
-
-    background: linear-gradient(
-        90deg,
-        #e91e63,
-        #ff5c9a
-    );
-}
-
-.intro-box p {
-    margin-bottom: 20px;
-
-    color: #4b4650;
-
-    font-size: 16px;
-    line-height: 1.8;
-
-    text-align: justify;
-}
-
-.intro-box strong {
-    color: var(--pink);
-    font-weight: 700;
-}
-
-.intro-box p:last-child {
-    margin-top: 28px;
-    margin-bottom: 0;
-
-    padding: 18px 22px;
-
-    background: linear-gradient(
-        135deg,
-        #fff0f6,
-        #fff8fb
-    );
-
-    border: 1px solid #ffd1e3;
-    border-left: 4px solid var(--pink);
-
-    border-radius: 14px;
-
-    text-align: left;
-}
-
-/* =========================================================
-   FEATURES
-========================================================= */
-
-.feature-section {
-    padding: 10px 0 45px;
-}
-
-.feature-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.feature-card {
-    padding: 25px 20px;
-
-    background: #fff;
-
-    border-top: 4px solid var(--pink);
-    border-radius: 10px;
-
-    text-align: center;
-
-    box-shadow: var(--shadow);
-}
-
-.feature-icon {
-    margin-bottom: 12px;
-
-    font-size: 42px;
-}
-
-.feature-card h3 {
-    margin-bottom: 5px;
-
-    color: #222;
-
-    font-size: 16px;
-}
-
-.feature-card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* =========================================================
-   COMMITMENT
-========================================================= */
-
-.commitment-section {
-    padding: 20px 0 50px;
-}
-
-.commitment-list {
-    display: flex;
-    flex-direction: column;
-
-    gap: 14px;
-}
-
-.commitment-item {
-    display: flex;
-    align-items: center;
-
-    padding: 16px 20px;
-
-    background: #fff;
-
-    border-radius: 9px;
-
-    box-shadow: var(--shadow);
-
-    color: #444;
-
-    font-size: 16px;
-}
-
-.commitment-check {
-    width: 30px;
-    height: 30px;
-
-    flex-shrink: 0;
-
-    margin-right: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: linear-gradient(
-        135deg,
-        #ec4b98,
-        #d92b82
-    );
-
-    color: #fff;
-
-    font-size: 19px;
-    font-weight: bold;
-}
-
-/* =========================================================
-   FEE SECTION
-========================================================= */
-
-.fee-section {
-    width: 100%;
-
-    padding: 70px 20px;
-}
-
-.fee-card {
-    width: min(1080px, 100%);
-
-    margin: 0 auto;
-
-    background: #fff;
-
-    border: 1px solid #f0d7e5;
-    border-radius: 22px;
-
-    box-shadow:
-        0 12px 35px rgba(219, 43, 126, .08);
-
-    overflow: hidden;
-}
-
-/* HEADER */
-
-.fee-header {
-    padding: 32px 40px 20px;
-
-    background: linear-gradient(
-        135deg,
-        #fff5fa,
-        #fff
-    );
-}
-
-.fee-label {
-    display: inline-block;
-
-    margin-bottom: 6px;
-
-    color: #df2580;
-
-    font-size: 13px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.fee-header h2 {
-    margin: 0;
-
-    color: #171717;
-
-    font-size: 25px;
-    font-weight: 800;
-}
-
-.fee-header p {
-    margin-top: 7px;
-
-    color: #667085;
-
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* FORM */
-
-.fee-form {
-    padding: 25px 40px 35px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-}
-
-.form-item {
-    display: flex;
-    flex-direction: column;
-
-    gap: 8px;
-}
-
-.form-item.full {
-    grid-column: 1 / -1;
-}
-
-.form-item label {
-    color: #252525;
-
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.form-item select,
-.form-item input {
-    width: 100%;
-    height: 48px;
-
-    padding: 0 15px;
-
-    border: 1px solid #d9d9d9;
-    border-radius: 12px;
-
-    background: #fff;
-
-    color: #202020;
-
-    font-size: 15px;
-
-    outline: none;
-
-    transition: .2s;
-}
-
-.form-item select:focus,
-.form-item input:focus {
-    border-color: #df2580;
-
-    box-shadow:
-        0 0 0 3px rgba(223, 37, 128, .08);
-}
-
-.form-item input::placeholder {
-    color: #a5a5a5;
-}
-
-/* BUTTON */
-
-.calculate-btn {
-    grid-column: 1 / -1;
-
-    height: 52px;
-
-    border-radius: 13px;
-
-    background: linear-gradient(
-        135deg,
-        #df2580,
-        #ed3d91
-    );
-
-    color: #fff;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 8px 20px rgba(223, 37, 128, .20);
-
-    transition: .2s;
-}
-
-.calculate-btn:hover {
-    transform: translateY(-1px);
-
-    box-shadow:
-        0 10px 25px rgba(223, 37, 128, .25);
-}
-
-/* =========================================================
-   RESULT
-========================================================= */
-
-.fee-result {
-    display: none;
-
-    margin: 0 40px 40px;
-
-    background: #fff;
-
-    border: 1px solid #f0d5e2;
-    border-radius: 16px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 8px 30px rgba(217, 43, 130, .10);
-
-    text-align: left;
-}
-
-.fee-result.show {
-    display: block;
-
-    animation: resultShow .3s ease;
-}
-
-.hidden {
-    display: none !important;
-}
-
-@keyframes resultShow {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+    .header-container {
+        gap: 12px;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .logo img {
+        width: 72px;
+        height: 52px;
+    }
+
+    .nav {
+        gap: 3px;
+    }
+
+    .nav a {
+        font-size: 13px;
+        padding: 8px 9px;
+    }
+
+    .header-contact {
+        gap: 4px;
+    }
+
+    .header-contact a {
+        padding: 7px 8px;
+        font-size: 11px;
     }
 }
 
-/* RESULT HEADER */
-
-.result-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-
-    padding: 20px 22px;
-
-    background: linear-gradient(
-        135deg,
-        #fff1f8,
-        #fff
-    );
-
-    border-bottom: 1px solid #f4dce7;
-}
-
-.result-small {
-    margin-bottom: 2px;
-
-    color: #d92b82;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: .8px;
-}
-
-.result-header h3 {
-    margin: 0;
-
-    color: #222;
-
-    font-size: 19px;
-}
-
-.result-success {
-    flex-shrink: 0;
-
-    padding: 6px 11px;
-
-    border-radius: 20px;
-
-    background: #e9faf3;
-
-    color: #00a86b;
-
-    font-size: 12px;
-    font-weight: 700;
-}
-
-/* SERVICE */
-
-.result-service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 12px;
-
-    margin: 20px 22px;
-    padding: 15px 17px;
-
-    background: linear-gradient(
-        135deg,
-        #fff8fc,
-        #fff
-    );
-
-    border: 1px solid #f3dce8;
-    border-radius: 12px;
-}
-
-.service-title {
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 3px;
-}
-
-.service-label {
-    color: #d92b82;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    letter-spacing: .3px;
-}
-
-.result-service-name {
-    color: #222;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    line-height: 1.4;
-}
-
-.result-provider {
-    flex-shrink: 0;
-
-    padding: 6px 12px;
-
-    background: #fff;
-
-    border: 1px solid #ead5df;
-    border-radius: 18px;
-
-    color: #555;
-
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* DETAILS */
-
-.result-details {
-    padding: 0 22px;
-}
-
-.result-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-
-    padding: 13px 0;
-
-    border-bottom: 1px dashed #e8e8e8;
-
-    font-size: 14px;
-}
-
-.result-row span {
-    color: #777;
-}
-
-.result-row strong {
-    color: #333;
-
-    font-size: 14px;
-
-    text-align: right;
-}
-
-.result-row .fee-red {
-    color: #d92b82;
-
-    font-size: 16px;
-}
-
-/* RECEIVE */
-
-.receive-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin: 20px 22px;
-    padding: 18px;
-
-    background: linear-gradient(
-        135deg,
-        #edfff8,
-        #f7fffb
-    );
-
-    border: 1px solid #ccefe0;
-    border-radius: 12px;
-}
-
-.receive-box span {
-    display: block;
-
-    margin-bottom: 3px;
-
-    color: #777;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: .5px;
-}
-
-.receive-box strong {
-    display: block;
-
-    color: #00a86b;
-
-    font-size: 24px;
-    font-weight: 900;
-}
-
-.receive-icon {
-    width: 36px;
-    height: 36px;
-
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #00a86b;
-
-    color: #fff;
-
-    font-weight: bold;
-}
-
-/* NOTE */
-
-.result-note {
-    margin: 0 22px 18px;
-    padding: 12px 14px;
-
-    background: #fff9ec;
-
-    border: 1px solid #f6e4b7;
-    border-radius: 9px;
-
-    color: #777;
-
-    font-size: 12px;
-    line-height: 1.6;
-}
-
-.result-note strong {
-    color: #c58b18;
-}
-
-/* ACTIONS */
-
-#resultActions {
-    display: flex;
-
-    gap: 12px;
-
-    margin: 0 22px 22px;
-    padding-top: 18px;
-
-    border-top: 1px solid #f0d9e6;
-}
-
-.result-action {
-    flex: 1;
-
-    min-height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 12px;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: .2s;
-}
-
-.reset-btn {
-    background: #fff;
-
-    color: #d92b83;
-
-    border: 1px solid #e6a6c7;
-}
-
-.reset-btn:hover {
-    background: #fff3f8;
-
-    transform: translateY(-1px);
-}
-
-.contact-btn {
-    background: linear-gradient(
-        135deg,
-        #d92782,
-        #ef3d96
-    );
-
-    color: #fff;
-
-    border: 1px solid #d92782;
-
-    box-shadow:
-        0 6px 16px rgba(217, 39, 130, .20);
-}
-
-.contact-btn:hover {
-    transform: translateY(-1px);
-}
 
 /* =========================================================
-   REVIEW
+   HEADER MOBILE
+   LOGO | THÔNG TIN | LIÊN HỆ
 ========================================================= */
 
-.review-section {
-    padding: 55px 0;
+@media (max-width: 700px) {
+
+    .header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 100%;
+        min-height: 70px;
+
+        margin: 0;
+        padding: 10px 12px;
+
+        display: grid;
+
+        /*
+           3 CỘT:
+           LOGO | THÔNG TIN | LIÊN HỆ
+        */
+        grid-template-columns:
+            minmax(65px, .9fr)
+            minmax(105px, 1.3fr)
+            minmax(105px, 1.2fr);
+
+        gap: 8px;
+
+        align-items: center;
+    }
+
+    /* LOGO */
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 68px;
+        height: 50px;
+
+        object-fit: contain;
+    }
+
+    /* MENU */
+
+    .nav {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: flex-start;
+
+        gap: 1px;
+
+        margin: 0;
+    }
+
+    .nav a {
+        display: block;
+
+        width: 100%;
+
+        padding: 2px 0;
+
+        border-radius: 0;
+
+        background: transparent;
+
+        color: #555;
+
+        font-size: 11px;
+        font-weight: 600;
+
+        line-height: 1.4;
+
+        white-space: nowrap;
+    }
+
+    .nav a:hover {
+        background: transparent;
+        box-shadow: none;
+
+        color: #d92b82;
+
+        transform: none;
+    }
+
+    /* LIÊN HỆ */
+
+    .header-contact {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+    .header-contact a {
+        width: 100%;
+
+        padding: 2px 0;
+
+        border: 0;
+        border-radius: 0;
+
+        background: transparent;
+
+        box-shadow: none;
+
+        font-size: 10px;
+        font-weight: 600;
+
+        line-height: 1.4;
+
+        text-align: left;
+    }
+
+    .phone {
+        color: #555;
+    }
+
+    .phone:hover {
+        background: transparent;
+        transform: none;
+    }
+
+    .zalo {
+        width: auto !important;
+
+        padding: 3px 8px !important;
+
+        margin-top: 1px;
+
+        border-radius: 12px !important;
+
+        background: #00a86b !important;
+
+        color: #fff !important;
+
+        font-size: 10px !important;
+        font-weight: 700 !important;
+    }
+
+    .zalo:hover {
+        background: #008f5b !important;
+        transform: none;
+    }
 }
 
-.review-title {
-    margin-bottom: 8px;
-
-    text-align: center;
-
-    color: var(--pink);
-
-    font-size: 30px;
-    font-weight: 800;
-}
-
-.review-subtitle {
-    margin-bottom: 35px;
-
-    text-align: center;
-
-    color: var(--pink);
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.review-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 22px;
-}
-
-.review-item {
-    background: #fff;
-
-    border-radius: 9px;
-
-    overflow: hidden;
-
-    box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    transition: transform .2s ease;
-}
-
-.review-item:hover {
-    transform: translateY(-3px);
-}
-
-.review-item img {
-    width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
-}
 
 /* =========================================================
-   FAQ
+   ĐIỆN THOẠI NHỎ
 ========================================================= */
 
-.faq-section {
-    padding: 55px 0;
+@media (max-width: 430px) {
 
-    background: #fff;
+    .header-container {
+        grid-template-columns:
+            62px
+            minmax(95px, 1fr)
+            minmax(100px, 1fr);
+
+        gap: 6px;
+
+        padding: 9px 10px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 46px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .header-contact a {
+        font-size: 9px;
+    }
+
+    .zalo {
+        font-size: 9px !important;
+        padding: 2px 7px !important;
+    }
 }
 
-.faq-list {
-    width: min(900px, 100%);
-
-    margin: 30px auto 0;
-}
-
-.faq-item {
-    margin-bottom: 12px;
-
-    background: #fff;
-
-    border: 1px solid #e5e5e5;
-    border-radius: 10px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 3px 12px rgba(0, 0, 0, .04);
-}
-
-.faq-item summary {
-    position: relative;
-
-    padding: 18px 50px 18px 20px;
-
-    color: #333;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    list-style: none;
-}
-
-.faq-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.faq-item summary::after {
-    content: "+";
-
-    position: absolute;
-
-    right: 20px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    color: #d92b82;
-
-    font-size: 23px;
-}
-
-.faq-item[open] summary::after {
-    content: "−";
-}
-
-.faq-item summary:hover {
-    color: #d92b82;
-    background: #fff7fb;
-}
-
-.faq-answer {
-    padding: 0 20px 18px;
-
-    border-top: 1px solid #f2e1e9;
-
-    color: #666;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-}
 
 /* =========================================================
-   FOOTER
+   FOOTER - MINH HOÀNG VTS
 ========================================================= */
 
 .footer {
-    width: 100%;
-
     margin-top: 55px;
 
-    padding: 45px 0 18px;
+    padding: 42px 0 18px;
 
     background: linear-gradient(
         180deg,
@@ -1192,11 +402,7 @@ button {
 
     border-top: 1px solid #f3d4e2;
 
-    overflow: hidden;
-}
-
-.footer .container {
-    width: min(1100px, calc(100% - 40px));
+    color: #555;
 }
 
 .footer-main {
@@ -1207,15 +413,18 @@ button {
         1fr
         1fr;
 
-    gap: 45px;
+    gap: 55px;
 
     align-items: start;
 }
 
-/* BRAND */
+
+/* =========================
+   FOOTER BRAND
+========================= */
 
 .footer-brand {
-    min-width: 0;
+    padding-right: 20px;
 }
 
 .footer-logo-img {
@@ -1224,25 +433,27 @@ button {
 
     object-fit: contain;
 
-    margin-bottom: 10px;
+    display: block;
+
+    margin-bottom: 8px;
 }
 
 .footer-brand h3 {
-    margin-bottom: 5px;
-
     color: #d92b82;
 
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
+
+    margin-bottom: 3px;
 }
 
 .footer-brand p {
-    margin-bottom: 5px;
-
     color: #555;
 
     font-size: 14px;
     font-weight: 600;
+
+    margin-bottom: 4px;
 }
 
 .footer-brand span {
@@ -1251,24 +462,25 @@ button {
     font-size: 12px;
 }
 
-/* COLUMN */
+
+/* =========================
+   FOOTER COLUMN
+========================= */
 
 .footer-column {
-    min-width: 0;
-
     display: flex;
     flex-direction: column;
 
-    gap: 9px;
+    gap: 8px;
 }
 
 .footer-column h3 {
-    margin-bottom: 5px;
-
     color: #d92b82;
 
     font-size: 15px;
     font-weight: 800;
+
+    margin-bottom: 6px;
 }
 
 .footer-column a {
@@ -1278,43 +490,32 @@ button {
 
     font-size: 14px;
 
-    transition: .2s;
+    text-decoration: none;
+
+    transition: .2s ease;
 }
 
 .footer-column a:hover {
     color: #d92b82;
 
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
-.footer-column p {
-    color: #555;
 
-    font-size: 14px;
+/* =========================
+   FOOTER CONTACT
+========================= */
+
+.footer-contact a {
+    font-weight: 500;
 }
-
-/* CONTACT */
-
-.footer-contact {
-    display: flex;
-    flex-direction: column;
-
-    gap: 9px;
-}
-
-/* ZALO */
 
 .footer-zalo {
-    display: inline-flex !important;
-
     width: fit-content !important;
-
-    align-items: center;
-    justify-content: center;
 
     margin-top: 5px;
 
-    padding: 9px 17px;
+    padding: 8px 16px;
 
     background: #00a86b;
 
@@ -1324,8 +525,6 @@ button {
 
     font-size: 13px !important;
     font-weight: 700 !important;
-
-    transition: .2s;
 }
 
 .footer-zalo:hover {
@@ -1334,23 +533,28 @@ button {
     transform: translateY(-1px) !important;
 }
 
-/* LINE */
+
+/* =========================
+   FOOTER LINE
+========================= */
 
 .footer-line {
     width: 100%;
     height: 1px;
 
-    margin: 30px 0 17px;
-
     background: #eccbd9;
+
+    margin: 28px 0 15px;
 }
 
-/* BOTTOM */
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
 
 .footer-bottom {
-    width: 100%;
-
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -1359,12 +563,6 @@ button {
     color: #777;
 
     font-size: 12px;
-
-    text-align: center;
-}
-
-.footer-bottom p {
-    margin: 0;
 }
 
 .footer-bottom strong {
@@ -1372,448 +570,63 @@ button {
 }
 
 .footer-note {
-    width: 100%;
     max-width: 850px;
 
     margin: 10px auto 0;
+
+    text-align: center;
 
     color: #999;
 
     font-size: 10px;
 
     line-height: 1.5;
-
-    text-align: center;
 }
 
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media screen and (max-width: 900px) {
-
-    .header-container {
-        gap: 12px;
-    }
-
-    .nav {
-        gap: 3px;
-    }
-
-    .nav a {
-        padding: 8px 9px;
-
-        font-size: 13px;
-    }
-
-    .header-contact {
-        gap: 4px;
-    }
-
-    .header-contact a {
-        padding: 8px 8px;
-
-        font-size: 10px;
-    }
-
-    .review-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer-main {
-        grid-template-columns:
-            1.3fr
-            1fr
-            1fr;
-
-        gap: 25px;
-    }
-}
 
 /* =========================================================
-   MOBILE
+   FOOTER MOBILE
+   LOGO | THÔNG TIN | LIÊN HỆ
 ========================================================= */
 
-@media screen and (max-width: 700px) {
-
-    /* BODY */
-
-    body {
-        font-size: 14px;
-    }
-
-    /* CONTAINER */
-
-    .container {
-        width: calc(100% - 24px);
-    }
-
-    /* =====================================================
-       HEADER MOBILE
-    ===================================================== */
-
-    .header {
-        position: sticky;
-        top: 0;
-    }
-
-    .header-container {
-        width: 100%;
-
-        min-height: auto;
-
-        padding: 8px 10px;
-
-        display: grid;
-
-        grid-template-columns: 62px 1fr;
-
-        grid-template-rows: auto auto;
-
-        grid-template-areas:
-            "logo contact"
-            "nav nav";
-
-        gap: 7px;
-    }
-
-    .logo {
-        grid-area: logo;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .logo img {
-        width: 58px;
-        height: 44px;
-    }
-
-    .header-contact {
-        grid-area: contact;
-
-        width: 100%;
-
-        display: flex;
-
-        justify-content: flex-end;
-        align-items: center;
-
-        gap: 5px;
-    }
-
-    .header-contact a {
-        padding: 7px 8px;
-
-        border-radius: 8px;
-
-        font-size: 10px;
-    }
-
-    .nav {
-        grid-area: nav;
-
-        width: 100%;
-
-        display: flex;
-
-        justify-content: center;
-        align-items: center;
-
-        flex-wrap: wrap;
-
-        gap: 5px;
-    }
-
-    .nav a {
-        padding: 6px 8px;
-
-        border-radius: 8px;
-
-        font-size: 11px;
-    }
-
-    /* =====================================================
-       HERO
-    ===================================================== */
-
-    .hero {
-        padding: 12px 0 20px;
-    }
-
-    .hero-image {
-        border-radius: 8px;
-    }
-
-    /* =====================================================
-       TITLE
-    ===================================================== */
-
-    .section-title,
-    .review-title {
-        font-size: 25px;
-    }
-
-    .section-subtitle,
-    .review-subtitle {
-        font-size: 20px;
-    }
-
-    /* =====================================================
-       INTRO
-    ===================================================== */
-
-    .intro-section {
-        padding: 40px 12px;
-    }
-
-    .intro-box {
-        padding: 28px 20px;
-
-        border-radius: 18px;
-    }
-
-    .intro-section .section-title {
-        font-size: 23px;
-
-        line-height: 1.4;
-
-        letter-spacing: 0;
-    }
-
-    .intro-section .section-title::after {
-        width: 50px;
-        height: 3px;
-
-        margin: 13px auto 27px;
-    }
-
-    .intro-box p {
-        font-size: 15px;
-
-        line-height: 1.75;
-
-        text-align: left;
-    }
-
-    .intro-box p:last-child {
-        padding: 16px;
-
-        border-left-width: 3px;
-    }
-
-    /* =====================================================
-       FEATURE
-    ===================================================== */
-
-    .feature-section {
-        padding: 5px 0 35px;
-    }
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-
-        gap: 15px;
-    }
-
-    /* =====================================================
-       COMMITMENT
-    ===================================================== */
-
-    .commitment-item {
-        padding: 13px 14px;
-
-        font-size: 14px;
-    }
-
-    .commitment-check {
-        width: 27px;
-        height: 27px;
-
-        margin-right: 11px;
-
-        font-size: 16px;
-    }
-
-    /* =====================================================
-       FEE
-    ===================================================== */
-
-    .fee-section {
-        padding: 40px 12px;
-    }
-
-    .fee-card {
-        border-radius: 18px;
-    }
-
-    .fee-header {
-        padding: 25px 20px 15px;
-    }
-
-    .fee-header h2 {
-        font-size: 21px;
-    }
-
-    .fee-header p {
-        font-size: 13px;
-    }
-
-    .fee-form {
-        padding: 20px;
-
-        grid-template-columns: 1fr;
-
-        gap: 16px;
-    }
-
-    .form-item.full {
-        grid-column: auto;
-    }
-
-    .calculate-btn {
-        grid-column: auto;
-    }
-
-    .fee-result {
-        margin: 0 15px 25px;
-    }
-
-    .result-header {
-        padding: 17px;
-
-        align-items: flex-start;
-    }
-
-    .result-header h3 {
-        font-size: 17px;
-    }
-
-    .result-service {
-        margin: 17px;
-
-        padding: 14px;
-
-        gap: 10px;
-    }
-
-    .result-service-name {
-        font-size: 14px;
-    }
-
-    .result-provider {
-        font-size: 12px;
-
-        padding: 6px 9px;
-    }
-
-    .result-details {
-        padding: 0 17px;
-    }
-
-    .result-row {
-        font-size: 13px;
-    }
-
-    .result-row strong {
-        font-size: 13px;
-    }
-
-    .receive-box {
-        margin: 17px;
-
-        padding: 15px;
-    }
-
-    .receive-box strong {
-        font-size: 20px;
-    }
-
-    .result-note {
-        margin-left: 17px;
-        margin-right: 17px;
-    }
-
-    #resultActions {
-        margin-left: 17px;
-        margin-right: 17px;
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .result-action {
-        width: 100%;
-    }
-
-    /* =====================================================
-       REVIEW
-    ===================================================== */
-
-    .review-section {
-        padding: 45px 0;
-    }
-
-    .review-grid {
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-    }
-
-    /* =====================================================
-       FAQ
-    ===================================================== */
-
-    .faq-section {
-        padding: 45px 0;
-    }
-
-    .faq-list {
-        margin-top: 25px;
-    }
-
-    .faq-item summary {
-        padding: 16px 45px 16px 15px;
-
-        font-size: 14px;
-    }
-
-    .faq-item summary::after {
-        right: 15px;
-    }
-
-    .faq-answer {
-        padding: 0 15px 16px;
-
-        font-size: 13px;
-    }
-
-    /* =====================================================
-       FOOTER MOBILE
-    ===================================================== */
+@media (max-width: 700px) {
 
     .footer {
         margin-top: 40px;
 
-        padding: 35px 0 18px;
+        padding: 30px 12px 15px;
     }
 
     .footer .container {
-        width: calc(100% - 24px);
+        width: 100%;
+        padding: 0;
     }
 
     .footer-main {
-        display: flex;
 
-        flex-direction: column;
+        /*
+           QUAN TRỌNG:
+           KHÔNG XUỐNG DÒNG
+        */
 
-        align-items: center;
+        display: grid;
 
-        gap: 25px;
+        grid-template-columns:
+            minmax(85px, 1fr)
+            minmax(105px, 1.2fr)
+            minmax(105px, 1.2fr);
 
-        text-align: center;
+        gap: 10px;
+
+        align-items: start;
+
+        text-align: left;
     }
+
+
+    /* =====================
+       BRAND
+    ===================== */
 
     .footer-brand {
         width: 100%;
@@ -1822,296 +635,173 @@ button {
     }
 
     .footer-logo-img {
-        width: 78px;
-        height: 52px;
+        width: 65px;
+        height: 48px;
 
-        margin: 0 auto 8px;
+        margin: 0 0 5px;
     }
 
     .footer-brand h3 {
-        font-size: 17px;
+        font-size: 12px;
+
+        line-height: 1.35;
+
+        margin-bottom: 2px;
     }
 
     .footer-brand p {
-        font-size: 13px;
+        font-size: 10px;
+
+        line-height: 1.4;
+
+        margin-bottom: 2px;
     }
 
     .footer-brand span {
-        font-size: 11px;
+        display: block;
+
+        font-size: 9px;
+
+        line-height: 1.4;
     }
+
+
+    /* =====================
+       COLUMN
+    ===================== */
 
     .footer-column {
         width: 100%;
 
-        align-items: center;
+        align-items: flex-start;
 
-        gap: 7px;
+        gap: 4px;
+
+        text-align: left;
     }
 
     .footer-column h3 {
-        font-size: 14px;
+        font-size: 11px;
+
+        margin-bottom: 3px;
+
+        line-height: 1.3;
     }
 
-    .footer-column a,
-    .footer-column p {
+    .footer-column a {
         width: auto;
 
-        font-size: 13px;
+        font-size: 10px;
 
-        text-align: center;
+        line-height: 1.45;
     }
 
     .footer-column a:hover {
         transform: none;
     }
 
-    .footer-contact {
-        align-items: center;
-    }
+
+    /* =====================
+       ZALO
+    ===================== */
 
     .footer-zalo {
-        margin: 5px auto 0;
+        width: fit-content !important;
+
+        margin-top: 3px;
+
+        padding: 4px 8px;
+
+        border-radius: 12px;
+
+        font-size: 9px !important;
     }
+
+
+    /* =====================
+       LINE
+    ===================== */
 
     .footer-line {
-        margin: 25px 0 15px;
+        margin: 20px 0 10px;
     }
 
+
+    /* =====================
+       COPYRIGHT
+    ===================== */
+
     .footer-bottom {
-        flex-direction: column;
-
-        justify-content: center;
-        align-items: center;
-
-        gap: 5px;
+        display: block;
 
         text-align: center;
 
-        font-size: 11px;
+        font-size: 10px;
+
+        line-height: 1.5;
     }
 
     .footer-bottom p {
-        width: 100%;
+        margin: 2px 0;
     }
 
     .footer-note {
-        padding: 0 5px;
+        margin-top: 6px;
 
-        font-size: 9px;
+        font-size: 8px;
+
+        line-height: 1.4;
     }
 }
 
+
 /* =========================================================
-   ĐIỆN THOẠI NHỎ
+   FOOTER SIÊU NHỎ
 ========================================================= */
 
-@media screen and (max-width: 430px) {
-
-    .container {
-        width: calc(100% - 20px);
-    }
-
-    /* HEADER */
-
-    .header-container {
-        grid-template-columns: 55px 1fr;
-
-        padding: 7px 8px;
-
-        gap: 5px;
-    }
-
-    .logo img {
-        width: 52px;
-        height: 40px;
-    }
-
-    .header-contact {
-        gap: 4px;
-    }
-
-    .header-contact a {
-        padding: 6px 7px;
-
-        font-size: 9px;
-    }
-
-    .nav {
-        gap: 4px;
-    }
-
-    .nav a {
-        padding: 5px 7px;
-
-        font-size: 10px;
-    }
-
-    /* INTRO */
-
-    .intro-section {
-        padding: 30px 10px;
-    }
-
-    .intro-box {
-        padding: 24px 17px;
-    }
-
-    .intro-section .section-title {
-        font-size: 21px;
-    }
-
-    .intro-box p {
-        font-size: 14px;
-    }
-
-    /* FEE */
-
-    .fee-section {
-        padding: 30px 8px;
-    }
-
-    .fee-header {
-        padding: 22px 17px 14px;
-    }
-
-    .fee-form {
-        padding: 17px;
-    }
-
-    .fee-result {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .result-header {
-        padding: 15px;
-    }
-
-    .result-header h3 {
-        font-size: 16px;
-    }
-
-    .result-service {
-        margin: 14px;
-
-        padding: 12px;
-    }
-
-    .result-provider {
-        font-size: 11px;
-
-        padding: 5px 8px;
-    }
-
-    .result-details {
-        padding: 0 14px;
-    }
-
-    .receive-box {
-        margin: 14px;
-    }
-
-    .result-note {
-        margin-left: 14px;
-        margin-right: 14px;
-    }
-
-    #resultActions {
-        margin-left: 14px;
-        margin-right: 14px;
-    }
-
-    /* REVIEW */
-
-    .review-grid {
-        gap: 10px;
-    }
-
-    /* FOOTER */
+@media (max-width: 430px) {
 
     .footer {
-        padding: 30px 0 15px;
-    }
-
-    .footer .container {
-        width: calc(100% - 20px);
+        padding-left: 9px;
+        padding-right: 9px;
     }
 
     .footer-main {
-        gap: 22px;
+        grid-template-columns:
+            58px
+            minmax(95px, 1fr)
+            minmax(95px, 1fr);
+
+        gap: 7px;
     }
 
     .footer-logo-img {
-        width: 70px;
-        height: 48px;
+        width: 58px;
+        height: 44px;
     }
 
     .footer-brand h3 {
-        font-size: 16px;
-    }
-
-    .footer-brand p {
-        font-size: 12px;
-    }
-
-    .footer-column h3 {
-        font-size: 13px;
-    }
-
-    .footer-column a,
-    .footer-column p {
-        font-size: 12px;
-    }
-
-    .footer-zalo {
-        padding: 8px 15px;
-
-        font-size: 12px !important;
-    }
-
-    .footer-bottom {
         font-size: 10px;
     }
 
-    .footer-note {
-        font-size: 8.5px;
-    }
-}
-
-/* =========================================================
-   SIÊU NHỎ
-========================================================= */
-
-@media screen and (max-width: 360px) {
-
-    .header-container {
-        grid-template-columns: 50px 1fr;
-
-        padding: 6px;
+    .footer-brand p {
+        font-size: 9px;
     }
 
-    .logo img {
-        width: 48px;
-        height: 37px;
+    .footer-column h3 {
+        font-size: 10px;
     }
 
-    .header-contact a {
-        padding: 5px 6px;
-
-        font-size: 8px;
+    .footer-column a {
+        font-size: 9px;
     }
 
-    .nav a {
-        padding: 5px 6px;
-
-        font-size: 9.5px;
+    .footer-zalo {
+        font-size: 8px !important;
+        padding: 3px 7px;
     }
 
-    .intro-box {
-        padding: 22px 15px;
-    }
-
-    .review-grid {
-        gap: 8px;
+    .footer-bottom {
+        font-size: 9px;
     }
 }
