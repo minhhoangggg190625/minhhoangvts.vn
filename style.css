@@ -2981,3 +2981,227 @@ serviceType.addEventListener("change", function () {
     text-align: center;
     margin: 0 !important;
 }
+/* =====================================================
+   FIX HEADER MOBILE - MINH HOÀNG VTS
+===================================================== */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header-container {
+    width: min(1180px, calc(100% - 32px));
+    min-height: 78px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* LOGO */
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 82px;
+    height: 58px;
+    object-fit: contain;
+}
+
+/* MENU */
+
+.nav {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+}
+
+.nav a {
+    white-space: nowrap;
+}
+
+/* CONTACT */
+
+.header-contact {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 700px) {
+
+    .header-container {
+        width: 100%;
+        min-height: auto;
+
+        padding: 8px 10px;
+
+        display: grid;
+
+        grid-template-columns: 65px 1fr;
+        grid-template-rows: auto auto;
+
+        grid-template-areas:
+            "logo contact"
+            "nav nav";
+
+        gap: 6px;
+    }
+
+    /* LOGO */
+
+    .logo {
+        grid-area: logo;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 62px;
+        height: 45px;
+    }
+
+    /* CONTACT */
+
+    .header-contact {
+        grid-area: contact;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        gap: 5px;
+
+        min-width: 0;
+    }
+
+    .header-contact a {
+        padding: 7px 8px;
+
+        font-size: 10px;
+
+        border-radius: 8px;
+
+        white-space: nowrap;
+    }
+
+    /* MENU */
+
+    .nav {
+        grid-area: nav;
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+
+        margin: 0;
+    }
+
+    .nav a {
+        padding: 6px 8px;
+
+        font-size: 11px;
+
+        border-radius: 8px;
+
+        white-space: nowrap;
+    }
+}
+
+
+/* =====================================================
+   ĐIỆN THOẠI NHỎ
+===================================================== */
+
+@media screen and (max-width: 430px) {
+
+    .header-container {
+        padding: 7px 8px;
+
+        grid-template-columns: 58px 1fr;
+
+        gap: 5px;
+    }
+
+    .logo img {
+        width: 55px;
+        height: 42px;
+    }
+
+    .header-contact {
+        gap: 4px;
+    }
+
+    .header-contact a {
+        padding: 6px 7px;
+
+        font-size: 9px;
+    }
+
+    .nav {
+        gap: 4px;
+    }
+
+    .nav a {
+        padding: 6px 7px;
+
+        font-size: 10.5px;
+    }
+}
+
+
+/* =====================================================
+   ĐIỆN THOẠI SIÊU NHỎ
+===================================================== */
+
+@media screen and (max-width: 360px) {
+
+    .header-container {
+        grid-template-columns: 52px 1fr;
+        padding: 6px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 38px;
+    }
+
+    .header-contact a {
+        padding: 5px 6px;
+        font-size: 8.5px;
+    }
+
+    .nav {
+        gap: 3px;
+    }
+
+    .nav a {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+}
